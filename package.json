@@ -1,0 +1,25 @@
+{
+  "name": "angular-poc",
+  "version": "1.0.0",
+  "description": "angular starter pack",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.19.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-express": "^0.3.5",
+    "gulp-watch": "^4.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aperde",
+  "license": "ISC"
+}

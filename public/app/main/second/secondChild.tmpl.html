@@ -1,0 +1,51 @@
+<div ng-init="vm.init()">
+	<p>second</p>
+
+	<input type="text" ng-model="vm.orderObj">
+	<p>Please enter the user's name</p>
+	<form>
+		<input type="text" ng-model="vm.user.Name">
+
+		<p>Please enter the user's city</p>
+		<input type="text" ng-model="vm.user.City">
+
+		<p>Please enter the user's country</p>
+		<input type="text" ng-model="vm.user.Country">
+		<br><br>
+		<button ng-click="vm.addUser()">Add new user</button>
+	</form>
+
+	<p style="color:red" ng-if="vm.user">The user name you entered is: {{vm.user.Name}}</p>
+	<p>Enter a filter criteria for the table</p> 
+	<input ng-model="searchText">
+	<p>The list of users is:</p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					City
+				</th>
+				<th>
+					Country
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in vm.users| orderBy : vm.orderObj | filter:searchText">
+				<td>
+					{{ user.Name }}
+				</td>
+				<td>
+					{{ user.City }}
+				</td>
+				<td>
+					{{ user.Country }}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,19 @@
+<div>
+	<p>first</p>
+
+	<p>Welcome {{vm.name}}!!!</p>
+
+	<p>1 + 1 equals {{ 1 + 1}}</p>
+
+	<p>To change the background of the input box, please enter a color</p>
+	<input style="background-color:{{vm.myCol}}" ng-model="vm.myCol" value="{{vm.myCol}}">
+	<div sample-paragraph></div>
+
+	<div ng-show="vm.showContent">
+		<p>Please enter an e-mail address</p>
+		<form name="myForm">
+			<input type="email" name="myAddress" ng-model="text">
+    		<span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>	
+		</form>
+	</div>
+</div>
